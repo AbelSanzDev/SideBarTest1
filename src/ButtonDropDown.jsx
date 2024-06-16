@@ -1,17 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
+import Button from "./Button";
+import DropDownOptions from "./DropDownOptions";
 
-const Button = ({
+const ButtonDropDown = ({
   children,
   onClick,
   StartSvg,
 
   RippleColor = "bg-[#ffffffb5]",
+  BgColor = "bg-[#a87abe]",
 
   className,
 }) => {
   const [ripples, setRipples] = useState([]);
   const buttonRef = useRef(null);
+  const [openDrop, setOpenDrop] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -23,6 +27,7 @@ const Button = ({
   }, [ripples]);
 
   const createRipple = (event) => {
+    setOpenDrop(!openDrop);
     const button = buttonRef.current;
     const rect = button.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
@@ -47,13 +52,26 @@ const Button = ({
       <div>
         <button
           ref={buttonRef}
-          className={`ripple-button ${className} p-2`}
+          className={`ripple-button  ${className} p-2`}
           onClick={createRipple}
         >
           <div className="flex items-center gap-2">
             {!!StartSvg ? <div>{StartSvg}</div> : null}
 
             {children}
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 7l10 10L22 7"
+                stroke="white"
+                stroke-width="4"
+                fill="none"
+              />
+            </svg>
           </div>
 
           <div className="ripple-container">
@@ -71,9 +89,19 @@ const Button = ({
             ))}
           </div>
         </button>
+        <div
+          className={`transition-all duration-300 w-[93%] delay-0 overflow-hidden ${BgColor} rounded-b-md ${
+            openDrop ? "max-h-screen" : "max-h-0"
+          }`}
+        >
+          <DropDownOptions>Producto1</DropDownOptions>
+          <DropDownOptions>Producto1</DropDownOptions>
+          <DropDownOptions>Producto1</DropDownOptions>
+          <DropDownOptions>Producto1</DropDownOptions>
+        </div>
       </div>
     </>
   );
 };
 
-export default Button;
+export default ButtonDropDown;

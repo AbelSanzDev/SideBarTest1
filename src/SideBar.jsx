@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Button from "./Button";
 import CloseIconSvg from "./icons/CloseIcon";
+import HomeIcon from "./icons/HomeIcon";
+import ButtonDropDown from "./ButtonDropDown";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -17,31 +19,91 @@ const SideBar = () => {
         } `}
       >
         <div className=" relative">
-          <div className=" absolute -right-7 mt-2">
+          <div className=" absolute -right-7 mt-[1px]">
             <Button
               onClick={() => {
                 handleChangeDirection();
               }}
+              className={"bg-[#a87abe] text-white w-auto rounded-full"}
             >
               <CloseIconSvg isOpen={isOpen} />
             </Button>
           </div>
           <div>
-            <div className="grid place-items-center">
-              <img
-                className="w-[7rem] pl-2 pt-4"
-                src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
-                alt=""
-              />
-              <h1 className="text-white text-3xl font-thin mb-4">Moaibi</h1>
-              <div className="w-[90%] border-b border-gray-500 "></div>
-              {/**Button--nav */}
-              <div className="mt-4">
-                <div>
-                  <Button>Hola</Button>
-                </div>
+            <div
+              className={` ${
+                isOpen ? "mx-[10%]" : "mx-0"
+              }  border-b border-gray-500 pt-5 `}
+            >
+              <div className="grid place-items-center">
+                <img
+                  className={` ${isOpen ? "w-[7rem]" : "w-[4rem]"}   pt-4`}
+                  src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
+                  alt=""
+                />
+                <h1
+                  className={`text-white ${
+                    isOpen ? "text-3xl" : "text-md"
+                  }  font-thin mb-4`}
+                >
+                  Moaibi
+                </h1>
               </div>
             </div>
+            {/**Button--nav */}
+            {isOpen ? (
+              <>
+                <div className="mt-4 pl-4">
+                  <div>
+                    <Button
+                      className={
+                        "w-[92%] text-2xl font-thin bg-transparent rounded-md text-white"
+                      }
+                      StartSvg={<HomeIcon />}
+                    >
+                      Inicio
+                    </Button>
+                  </div>
+                  <div>
+                    <ButtonDropDown
+                      className={
+                        "w-[92%] text-2xl font-thin text-white rounded-md"
+                      }
+                      BgColor={"bg-[#0c0c0c83]"}
+                      StartSvg={<HomeIcon />}
+                    >
+                      Products
+                    </ButtonDropDown>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="mt-4 grid place-items-center">
+                  <div>
+                    <Button
+                      className={
+                        "w-[92%] text-2xl font-thin bg-transparent rounded-md text-white"
+                      }
+                      StartSvg={<HomeIcon />}
+                    >
+                      Inicio
+                    </Button>
+                  </div>
+                  <div>
+                    <ButtonDropDown
+                      className={
+                        "w-[92%] text-2xl font-thin text-white rounded-md"
+                      }
+                      BgColor={"bg-[#0c0c0c83]"}
+                      StartSvg={<HomeIcon />}
+                    >
+                      Products
+                    </ButtonDropDown>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
