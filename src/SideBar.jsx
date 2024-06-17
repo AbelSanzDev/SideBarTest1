@@ -9,6 +9,9 @@ const SideBar = () => {
   const handleChangeDirection = () => {
     setIsOpen(!isOpen);
   };
+  const handleChangeDirectionTrue = () => {
+    setIsOpen(true);
+  };
   return (
     <div className={`${isOpen ? " lg:static relative" : "lg:static relative"}`}>
       <div
@@ -37,12 +40,14 @@ const SideBar = () => {
             >
               <div className="grid place-items-center">
                 <img
-                  className={` ${isOpen ? "w-[7rem]" : "w-[4rem]"}   pt-4`}
+                  className={` transition-all duration-500 ${
+                    isOpen ? "w-[7rem]" : "w-[4rem]"
+                  }   pt-4`}
                   src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
                   alt=""
                 />
                 <h1
-                  className={`text-white ${
+                  className={` transition-all duration-500 text-white ${
                     isOpen ? "text-3xl" : "text-md"
                   }  font-thin mb-4`}
                 >
@@ -71,6 +76,7 @@ const SideBar = () => {
                       }
                       BgColor={"bg-[#0c0c0c83]"}
                       StartSvg={<HomeIcon />}
+                      isOpen={isOpen}
                     >
                       Products
                     </ButtonDropDown>
@@ -79,26 +85,23 @@ const SideBar = () => {
               </>
             ) : (
               <>
-                <div className="mt-4 grid place-items-center">
+                <div className="mt-4 ml-3">
                   <div>
                     <Button
                       className={
-                        "w-[92%] text-2xl font-thin bg-transparent rounded-md text-white"
+                        " text-2xl font-thin bg-transparent rounded-md text-white"
                       }
-                      StartSvg={<HomeIcon />}
                     >
-                      Inicio
+                      <HomeIcon />
                     </Button>
                   </div>
                   <div>
                     <ButtonDropDown
-                      className={
-                        "w-[92%] text-2xl font-thin text-white rounded-md"
-                      }
+                      className={" text-2xl font-thin text-white rounded-md"}
                       BgColor={"bg-[#0c0c0c83]"}
-                      StartSvg={<HomeIcon />}
+                      handleChangeDirectionTrue={handleChangeDirectionTrue}
                     >
-                      Products
+                      <HomeIcon />
                     </ButtonDropDown>
                   </div>
                 </div>

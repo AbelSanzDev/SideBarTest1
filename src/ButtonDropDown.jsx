@@ -7,11 +7,11 @@ const ButtonDropDown = ({
   children,
   onClick,
   StartSvg,
-
+  isOpen,
   RippleColor = "bg-[#ffffffb5]",
   BgColor = "bg-[#a87abe]",
-
   className,
+  handleChangeDirectionTrue,
 }) => {
   const [ripples, setRipples] = useState([]);
   const buttonRef = useRef(null);
@@ -25,8 +25,16 @@ const ButtonDropDown = ({
     }, 600);
     return () => clearTimeout(timeout);
   }, [ripples]);
-
+  useEffect(() => {
+    if (!isOpen) {
+      setOpenDrop(false);
+    }
+  }, [isOpen]);
   const createRipple = (event) => {
+    if (!isOpen) {
+      handleChangeDirectionTrue();
+    }
+
     setOpenDrop(!openDrop);
     const button = buttonRef.current;
     const rect = button.getBoundingClientRect();
@@ -89,15 +97,17 @@ const ButtonDropDown = ({
             ))}
           </div>
         </button>
-        <div
-          className={`transition-all duration-300 w-[93%] delay-0 overflow-hidden ${BgColor} rounded-b-md ${
-            openDrop ? "max-h-screen" : "max-h-0"
-          }`}
-        >
-          <DropDownOptions>Producto1</DropDownOptions>
-          <DropDownOptions>Producto1</DropDownOptions>
-          <DropDownOptions>Producto1</DropDownOptions>
-          <DropDownOptions>Producto1</DropDownOptions>
+        <div className=" ">
+          <div
+            className={`transition-all duration-300 w-[93%] delay-0 overflow-hidden ${BgColor} rounded-b-md ${
+              openDrop ? "max-h-screen" : "max-h-0"
+            }`}
+          >
+            <DropDownOptions>Producto1</DropDownOptions>
+            <DropDownOptions>Producto1</DropDownOptions>
+            <DropDownOptions>Producto1</DropDownOptions>
+            <DropDownOptions>Producto1</DropDownOptions>
+          </div>
         </div>
       </div>
     </>

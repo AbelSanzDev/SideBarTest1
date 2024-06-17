@@ -1,0 +1,37 @@
+Date : 2024-06-16 11:16:38
+Directory : c:\Users\abels\OneDrive\Escritorio\sidebar-react\src
+Total : 10 files,  391 codes, 9 comments, 45 blanks, all 445 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript JSX |          8 |        360 |          8 |         41 |        409 |
+| CSS            |          2 |         31 |          1 |          4 |         36 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                     | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                        |         10 |        391 |          9 |         45 |        445 |
+| . (Files)                                                                |          8 |        347 |          9 |         40 |        396 |
+| icons                                                                    |          2 |         44 |          0 |          5 |         49 |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                 | language       | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\App.css             | CSS            |         28 |          1 |          4 |         33 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\App.jsx             | JavaScript JSX |         24 |          7 |          4 |         35 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\Button.jsx          | JavaScript JSX |         67 |          0 |         13 |         80 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\ButtonDropDown.jsx  | JavaScript JSX |         96 |          0 |         11 |        107 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\DropDownOptions.jsx | JavaScript JSX |         10 |          0 |          3 |         13 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\SideBar.jsx         | JavaScript JSX |        110 |          1 |          3 |        114 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\icons\CloseIcon.jsx | JavaScript JSX |         23 |          0 |          2 |         25 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\icons\HomeIcon.jsx  | JavaScript JSX |         21 |          0 |          3 |         24 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\index.css           | CSS            |          3 |          0 |          0 |          3 |
+| c:\Users\abels\OneDrive\Escritorio\sidebar-react\src\main.jsx            | JavaScript JSX |          9 |          0 |          2 |         11 |
+| Total                                                                    |                |        391 |          9 |         45 |        445 |
++--------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
