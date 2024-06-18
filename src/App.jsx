@@ -15,7 +15,10 @@ function App() {
       </Button> */}
       <div className="flex">
         <div>
-          <SideBar />
+          <SideBar
+            Name="Moaibi"
+            src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
+          ></SideBar>
         </div>
 
         <div className="lg:mx-[5%] mx-[10%]">

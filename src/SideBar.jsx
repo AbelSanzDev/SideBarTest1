@@ -4,12 +4,7 @@ import CloseIconSvg from "./icons/CloseIcon";
 import HomeIcon from "./icons/HomeIcon";
 import ButtonDropDown from "./ButtonDropDown";
 
-const SideBar = ({
-  children,
-  Name = "Moaibi",
-  src = "https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png",
-  Icon = <HomeIcon />,
-}) => {
+const SideBar = ({ children, Name = "", src = "", Icon = <HomeIcon /> }) => {
   const [isOpen, setIsOpen] = useState(true);
   const handleChangeDirection = () => {
     setIsOpen(!isOpen);
@@ -44,30 +39,41 @@ const SideBar = ({
           >
             <div>
               <div
-                className={` ${
-                  isOpen ? "mx-[10%]" : "mx-0"
-                }  border-b border-gray-500 pt-5 `}
+                className={` ${isOpen ? "mx-[10%]" : "mx-0"} ${
+                  Name === "" && src === ""
+                    ? ""
+                    : "border-b border-gray-500 pt-5"
+                }  `}
               >
                 <div className="grid place-items-center">
-                  <img
-                    className={` transition-all duration-500 ${
-                      isOpen ? "w-[7rem]" : "w-[4rem]"
-                    }   pt-4`}
-                    src={src}
-                    alt="Logo"
-                  />
-                  <h1
-                    className={` transition-all duration-500 text-white ${
-                      isOpen ? "text-3xl" : "text-md"
-                    }  font-thin mb-4`}
-                  >
-                    {Name}
-                  </h1>
+                  {src === "" ? null : (
+                    <>
+                      <img
+                        className={` transition-all duration-500 ${
+                          isOpen ? "w-[7rem]" : "w-[4rem]"
+                        }   pt-4`}
+                        src={src}
+                        alt="Logo"
+                      />
+                    </>
+                  )}
+                  {Name === "" ? null : (
+                    <>
+                      <h1
+                        className={` transition-all duration-500 text-white ${
+                          isOpen ? "text-3xl" : "text-md"
+                        }  font-thin mb-4`}
+                      >
+                        {Name}
+                      </h1>
+                    </>
+                  )}
                 </div>
               </div>
               {/**Button--nav */}
               <>
                 <div className="mt-4 pl-0">
+                  {children}
                   <div>
                     <Button
                       className={
