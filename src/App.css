@@ -2,7 +2,6 @@
 .ripple-button {
   position: relative;
   overflow: hidden;
-
   font-size: 16px;
   cursor: pointer;
   outline: none;
