@@ -13,20 +13,21 @@ function App() {
       >
         Click me
       </Button> */}
-      <div className="flex">
-        <div>
-          <SideBar
-            Name="Moaibi"
-            src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
-          ></SideBar>
-        </div>
+      <div className="flex gap-5 h-[200rem]">
+        <SideBar
+          Name="Moaibi"
+          src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
+        ></SideBar>
 
-        <div className="lg:mx-[5%] mx-[10%]">
+        <div className="">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
             reiciendis magnam quidem voluptas. Quo, quidem sed laborum inventore
             ullam ipsam a. Error, ipsa doloribus inventore at cumque iste non
-            perspiciatis!
+            perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Facilis repellat perferendis deserunt aliquid id similique
+            veritatis tempore voluptatum placeat numquam nostrum dicta quod, ab
+            voluptate sint dolore odit fugiat ullam?
           </p>
         </div>
       </div>
