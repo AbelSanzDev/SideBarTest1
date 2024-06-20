@@ -24,18 +24,25 @@ const SideBar = ({ children, Name = "", src = "", Icon = <HomeIcon /> }) => {
             isOpen ? " lg:static relative" : "lg:static relative"
           } `}
         >
-          <div className=" relative">
-            <div className=" absolute md:-right-7 -right-4 mt-[1px] z-10">
-              <Button
-                onClick={() => {
-                  handleChangeDirection();
-                }}
-                className={"bg-[#a87abe] text-white w-auto rounded-full "}
-              >
-                <CloseIconSvg isOpen={isOpen} />
-              </Button>
+          <div
+            className={` transition-all duration-500 lg:w-full ${
+              isOpen ? "w-[230px]" : "w-[8px]"
+            } `}
+          >
+            <div className=" relative">
+              <div className=" absolute -right-7  mt-[1px] z-10">
+                <Button
+                  onClick={() => {
+                    handleChangeDirection();
+                  }}
+                  className={"bg-[#a87abe] text-white w-auto rounded-full "}
+                >
+                  <CloseIconSvg isOpen={isOpen} />
+                </Button>
+              </div>
             </div>
           </div>
+
           <div
             className={` transition-all duration-500 ${
               isOpen ? "w-[240px]" : "lg:w-[5rem] w-[1rem]"
