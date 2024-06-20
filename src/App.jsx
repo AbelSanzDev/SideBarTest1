@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./App.css";
 import Button from "./Button";
 import SideBar from "./SideBar";
+import AppContex from "./AppContex";
+import ButtonBar from "./ButtonBar";
+import HomeIcon from "./icons/HomeIcon";
 
 function App() {
   return (
@@ -17,7 +20,9 @@ function App() {
         <SideBar
           Name="Moaibi"
           src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
-        ></SideBar>
+        >
+          <ButtonBar icon={<HomeIcon />}>Home</ButtonBar>
+        </SideBar>
 
         <div className="">
           <p>

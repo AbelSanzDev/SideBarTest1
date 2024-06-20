@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "./Button";
 import CloseIconSvg from "./icons/CloseIcon";
 import HomeIcon from "./icons/HomeIcon";
 import ButtonDropDown from "./ButtonDropDown";
+import AppContex from "./AppContex";
 
 const SideBar = ({ children, Name = "", src = "", Icon = <HomeIcon /> }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const { isOpen, setIsOpen } = useContext(AppContex);
   const handleChangeDirection = () => {
     setIsOpen(!isOpen);
   };
@@ -93,16 +94,7 @@ const SideBar = ({ children, Name = "", src = "", Icon = <HomeIcon /> }) => {
                   <div className="">
                     <div className="mt-4 pl-0 ">
                       {children}
-                      <div>
-                        <Button
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin bg-transparent rounded-md text-white"
-                          }
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                        >
-                          {isOpen ? "Inicio" : <HomeIcon />}
-                        </Button>
-                      </div>
+
                       <div>
                         <ButtonDropDown
                           className={

@@ -76,7 +76,7 @@ const ButtonDropDown = ({
               <path
                 d="M2 7l10 10L22 7"
                 stroke="white"
-                stroke-width="4"
+                strokeWidth="4"
                 fill="none"
               />
             </svg>
