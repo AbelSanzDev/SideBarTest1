@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AppContex from "./AppContex";
+import { AppContex } from "./AppContex";
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <>
@@ -11,5 +11,3 @@ const AppProvider = ({ children }) => {
     </>
   );
 };
-
-export default AppProvider;

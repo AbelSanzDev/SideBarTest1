@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomeIcon = () => {
+export const HomeIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,5 +19,3 @@ const HomeIcon = () => {
     </svg>
   );
 };
-
-export default HomeIcon;

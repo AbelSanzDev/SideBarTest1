@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import ButtonDropDown from "./ButtonDropDown";
-import AppContex from "./AppContex";
-import HomeIcon from "./icons/HomeIcon";
+import { ButtonDropDown } from "./ButtonDropDown";
+import { AppContex } from "./AppContex";
+import { HomeIcon } from "./icons/HomeIcon";
 
-const ButtonDropDownBar = ({ children, Name, icon = "" }) => {
+export const ButtonDropDownBar = ({ children, Name, icon = "" }) => {
   const { isOpen, setIsOpen } = useContext(AppContex);
   const handleChangeDirectionTrue = () => {
     setIsOpen(true);
@@ -21,5 +21,3 @@ const ButtonDropDownBar = ({ children, Name, icon = "" }) => {
     </ButtonDropDown>
   );
 };
-
-export default ButtonDropDownBar;

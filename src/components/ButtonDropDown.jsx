@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import Button from "./Button";
-import DropDownOptions from "./DropDownOptions";
+import { Button } from "./Button";
+import { DropDownOptions } from "./DropDownOptions";
 
-const ButtonDropDown = ({
+export const ButtonDropDown = ({
   children,
   onClick,
   StartSvg,
@@ -111,5 +111,3 @@ const ButtonDropDown = ({
     </>
   );
 };
-
-export default ButtonDropDown;

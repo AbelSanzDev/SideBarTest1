@@ -1,4 +1,4 @@
-const CloseIconSvg = ({ isOpen }) => {
+export const CloseIconSvg = ({ isOpen }) => {
   return (
     <div className={`w-8 `}>
       <svg
@@ -20,5 +20,3 @@ const CloseIconSvg = ({ isOpen }) => {
     </div>
   );
 };
-
-export default CloseIconSvg;

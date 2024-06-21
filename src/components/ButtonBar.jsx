@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import AppContex from "./AppContex";
-import HomeIcon from "./icons/HomeIcon";
-import Button from "./Button";
+import { AppContex } from "./AppContex";
+import { HomeIcon } from "./icons/HomeIcon";
+import { Button } from "./Button";
 
-const ButtonBar = ({ children, icon = "" }) => {
+export const ButtonBar = ({ children, icon = "" }) => {
   const { isOpen } = useContext(AppContex);
   return (
     <div>
@@ -18,5 +18,3 @@ const ButtonBar = ({ children, icon = "" }) => {
     </div>
   );
 };
-
-export default ButtonBar;

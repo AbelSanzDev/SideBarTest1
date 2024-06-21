@@ -1,12 +1,12 @@
 import { useState, useContext } from "react";
 import "./App.css";
-import Button from "./Button";
-import SideBar from "./SideBar";
-import AppContex from "./AppContex";
-import ButtonBar from "./ButtonBar";
-import HomeIcon from "./icons/HomeIcon";
-import ButtonDropDownBar from "./ButtonDropDownBar";
-import DropDownOptions from "./DropDownOptions";
+import { Button } from "./Button";
+import { SideBar } from "./SideBar";
+import { AppContex } from "./AppContex";
+import { ButtonBar } from "./ButtonBar";
+import { HomeIcon } from "./icons/HomeIcon";
+import { ButtonDropDownBar } from "./ButtonDropDownBar";
+import { DropDownOptions } from "./DropDownOptions";
 
 function App() {
   return (

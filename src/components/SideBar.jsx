@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import Button from "./Button";
-import CloseIconSvg from "./icons/CloseIcon";
-import HomeIcon from "./icons/HomeIcon";
-import ButtonDropDown from "./ButtonDropDown";
-import AppContex from "./AppContex";
+import { Button } from "./Button";
+import { CloseIconSvg } from "./icons/CloseIcon";
+import { HomeIcon } from "./icons/HomeIcon";
+import { ButtonDropDown } from "./ButtonDropDown";
+import { AppContex } from "./AppContex";
 
-const SideBar = ({
+export const SideBar = ({
   children,
   ButtonColor = "bg-[#a87abe]",
   BgColor = "bg-[#1c1c1c]",
@@ -113,5 +113,3 @@ const SideBar = ({
     </div>
   );
 };
-
-export default SideBar;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-const Button = ({
+export const Button = ({
   children,
   onClick,
   StartSvg,
@@ -75,5 +75,3 @@ const Button = ({
     </>
   );
 };
-
-export default Button;
