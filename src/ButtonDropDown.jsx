@@ -98,9 +98,9 @@ const ButtonDropDown = ({
             ))}
           </div>
         </button>
-        <div className=" ">
+        <div className="grid  place-items-center ">
           <div
-            className={`transition-all duration-300 w-[93%] delay-0 overflow-hidden ${BgColor} rounded-b-md ${
+            className={`transition-all duration-300 w-[90%] delay-0 overflow-hidden ${BgColor} rounded-b-md ${
               openDrop ? "max-h-screen" : "max-h-0"
             }`}
           >

@@ -18,7 +18,7 @@ function App() {
       >
         Click me
       </Button> */}
-      <div className="flex gap-5 h-[200rem]">
+      <div className="flex   h-[200rem]">
         <SideBar
           Name="Moaibi"
           src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
@@ -40,7 +40,34 @@ function App() {
             perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Facilis repellat perferendis deserunt aliquid id similique
             veritatis tempore voluptatum placeat numquam nostrum dicta quod, ab
-            voluptate sint dolore odit fugiat ullam?
+            voluptate sint dolore odit fugiat ullam? Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Laudantium reiciendis magnam quidem
+            voluptas. Quo, quidem sed laborum inventore ullam ipsam a. Error,
+            ipsa doloribus inventore at cumque iste non perspiciatis! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Facilis repellat
+            perferendis deserunt aliquid id similique veritatis tempore
+            voluptatum placeat numquam nostrum dicta quod, ab voluptate sint
+            dolore odit fugiat ullam? Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Laudantium reiciendis magnam quidem voluptas. Quo,
+            quidem sed laborum inventore ullam ipsam a. Error, ipsa doloribus
+            inventore at cumque iste non perspiciatis! Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Facilis repellat perferendis
+            deserunt aliquid id similique veritatis tempore voluptatum placeat
+            numquam nostrum dicta quod, ab voluptate sint dolore odit fugiat
+            ullam? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Laudantium reiciendis magnam quidem voluptas. Quo, quidem sed
+            laborum inventore ullam ipsam a. Error, ipsa doloribus inventore at
+            cumque iste non perspiciatis! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Facilis repellat perferendis deserunt aliquid id
+            similique veritatis tempore voluptatum placeat numquam nostrum dicta
+            quod, ab voluptate sint dolore odit fugiat ullam? Lorem ipsum, dolor
+            sit amet consectetur adipisicing elit. Laudantium reiciendis magnam
+            quidem voluptas. Quo, quidem sed laborum inventore ullam ipsam a.
+            Error, ipsa doloribus inventore at cumque iste non perspiciatis!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            repellat perferendis deserunt aliquid id similique veritatis tempore
+            voluptatum placeat numquam nostrum dicta quod, ab voluptate sint
+            dolore odit fugiat ullam?
           </p>
         </div>
       </div>

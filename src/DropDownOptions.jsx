@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const DropDownOptions = ({ children }) => {
   return (
-    <Button className={"text-white m-3 text-xl rounded-md w-[90%]"}>
+    <Button className={"text-white m-3 text-xl rounded-md w-[100%]"}>
       {children}
     </Button>
   );
