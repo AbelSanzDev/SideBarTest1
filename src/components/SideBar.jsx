@@ -19,6 +19,7 @@ const SideBar = ({
     setIsOpen(!isOpen);
   };
   const [image, setImage] = useState(`bg-[url('${BgImage}')]`);
+
   return (
     <div>
       {" "}
