@@ -11,6 +11,7 @@ const ButtonDropDown = ({
   RippleColor = "bg-[#ffffffb5]",
   BgColor = "bg-[#a87abe]",
   className,
+  Name,
   handleChangeDirectionTrue,
 }) => {
   const [ripples, setRipples] = useState([]);
@@ -66,7 +67,7 @@ const ButtonDropDown = ({
           <div className="flex items-center gap-2">
             {!!StartSvg ? <div>{StartSvg}</div> : null}
 
-            {children}
+            {Name}
             <svg
               width="13"
               height="13"
@@ -103,10 +104,7 @@ const ButtonDropDown = ({
               openDrop ? "max-h-screen" : "max-h-0"
             }`}
           >
-            <DropDownOptions>Producto1</DropDownOptions>
-            <DropDownOptions>Producto1</DropDownOptions>
-            <DropDownOptions>Producto1</DropDownOptions>
-            <DropDownOptions>Producto1</DropDownOptions>
+            {children}
           </div>
         </div>
       </div>

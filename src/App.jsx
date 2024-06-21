@@ -5,6 +5,8 @@ import SideBar from "./SideBar";
 import AppContex from "./AppContex";
 import ButtonBar from "./ButtonBar";
 import HomeIcon from "./icons/HomeIcon";
+import ButtonDropDownBar from "./ButtonDropDownBar";
+import DropDownOptions from "./DropDownOptions";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
           src="https://res.cloudinary.com/dcqvg21nk/image/upload/v1714868174/Portfolio/RESMOAIBI/s1okzium52134zpcetm9.png"
         >
           <ButtonBar icon={<HomeIcon />}>Home</ButtonBar>
+          <ButtonDropDownBar icon={<HomeIcon />} Name={"Producto"}>
+            <DropDownOptions>Producto1</DropDownOptions>
+            <DropDownOptions>Producto1</DropDownOptions>
+            <DropDownOptions>Producto1</DropDownOptions>
+            <DropDownOptions>Producto1</DropDownOptions>
+          </ButtonDropDownBar>
         </SideBar>
 
         <div className="">

@@ -10,9 +10,7 @@ const SideBar = ({ children, Name = "", src = "", Icon = <HomeIcon /> }) => {
   const handleChangeDirection = () => {
     setIsOpen(!isOpen);
   };
-  const handleChangeDirectionTrue = () => {
-    setIsOpen(true);
-  };
+
   return (
     <div
       className={` transition-all duration-500 ${
@@ -92,101 +90,7 @@ const SideBar = ({ children, Name = "", src = "", Icon = <HomeIcon /> }) => {
                   </div>
                   {/**Button--nav */}
                   <div className="">
-                    <div className="mt-4 pl-0 ">
-                      {children}
-
-                      <div>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                          {/**Solucion para poder pasa productos es pasar el Name de ese drop como un prop */}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                        <ButtonDropDown
-                          className={
-                            "w-[100%] pl-5 text-2xl font-thin text-white rounded-md"
-                          }
-                          BgColor={"bg-[#0c0c0c83]"}
-                          StartSvg={isOpen ? <HomeIcon /> : null}
-                          isOpen={isOpen}
-                          handleChangeDirectionTrue={handleChangeDirectionTrue}
-                        >
-                          {isOpen ? "Products" : <HomeIcon />}
-                        </ButtonDropDown>
-                      </div>
-                    </div>
+                    <div className="mt-4 pl-0 ">{children}</div>
                   </div>
                 </div>
               </div>
