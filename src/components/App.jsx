@@ -26,7 +26,7 @@ function App() {
           ButtonColor="bg-[#7c7787]"
           BgImage={`${
             imgBg
-              ? "https://res.cloudinary.com/dcqvg21nk/image/upload/v1713594373/Portfolio/kh7azy142fknzrmstqed.jpg"
+              ? "bg-[url('https://res.cloudinary.com/dcqvg21nk/image/upload/v1713594373/Portfolio/kh7azy142fknzrmstqed.jpg')]"
               : ""
           }`}
         >
@@ -226,7 +226,7 @@ function App() {
         // Background color of the sidebar toggle button (open/close button)
         BgColor="bg-[#1c1c1c]"
         // Background color of the sidebar; defaults to #1c1c1c if not specified
-        BgImage="https://res.cloudinary.com/dcqvg21nk/image/upload/v1713594373/Portfolio/kh7azy142fknzrmstqed.jpg"
+        BgImage="bg-[url('https://res.cloudinary.com/dcqvg21nk/image/upload/v1713594373/Portfolio/kh7azy142fknzrmstqed.jpg')]"
         // URL for a background image to be used in the sidebar
       ></SideBar>
     </>
