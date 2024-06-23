@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App.jsx";
 import "./index.css";
-import { AppProvider } from "./components/AppProvider.jsx";
+import { SidebarProvider } from "./components/SidebarProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AppProvider>
+    <SidebarProvider>
       <App />
-    </AppProvider>
+    </SidebarProvider>
   </React.StrictMode>
 );

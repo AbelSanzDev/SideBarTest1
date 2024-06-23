@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AppContex } from "./AppContex";
 
-export const AppProvider = ({ children }) => {
+export const SidebarProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <>

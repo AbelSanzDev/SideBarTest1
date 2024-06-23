@@ -12,6 +12,7 @@ export const SideBar = ({
   BgImage = "",
   Name = "",
   src = "",
+  TxtColor,
   Icon = <HomeIcon />,
 }) => {
   const { isOpen, setIsOpen } = useContext(AppContex);
@@ -89,7 +90,7 @@ export const SideBar = ({
                         {Name === "" ? null : (
                           <>
                             <h1
-                              className={` transition-all duration-500 text-white ${
+                              className={` transition-all duration-500 ${TxtColor} ${
                                 isOpen ? "text-3xl" : "text-md"
                               }  font-thin mb-4`}
                             >
