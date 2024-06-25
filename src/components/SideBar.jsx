@@ -25,7 +25,7 @@ export const SideBar = ({
       {" "}
       <div
         className={` transition-all duration-500 ${
-          isOpen ? "md:w-[280px] w-[40px]" : "lg:w-[120px] w-[40px]"
+          isOpen ? "lg:w-[280px] w-[40px]" : "lg:w-[120px] w-[40px]"
         } `}
       >
         <div className=" fixed">
