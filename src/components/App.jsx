@@ -7,9 +7,11 @@ import { ButtonBar } from "./ButtonBar";
 import { HomeIcon } from "./icons/HomeIcon";
 import { ButtonDropDownBar } from "./ButtonDropDownBar";
 import { DropDownOptions } from "./DropDownOptions";
+import SidebarClose from "./SidebarClose";
 
 function App() {
   const [imgBg, setImgBg] = useState(false);
+
   const handleImage = () => {
     setImgBg(true);
   };
@@ -73,43 +75,44 @@ function App() {
           </div>
 
           <div className="md:max-w-3xl w-[100%] md:mx-auto md:px-4 py-8">
-            <div>
-              <h1 className="text-2xl font-bold">
-                Modern and Responsive Sidebar
-              </h1>
-              <p>
-                Welcome to our modern and responsive sidebar solution! Designed
-                to adapt seamlessly across all devices and screen sizes, our
-                sidebar enhances user experience by providing easy navigation
-                and accessibility in various contexts.
-              </p>
+            <SidebarClose>
+              <div>
+                <h1 className="text-2xl font-bold">
+                  Modern and Responsive Sidebar
+                </h1>
+                <p>
+                  Welcome to our modern and responsive sidebar solution!
+                  Designed to adapt seamlessly across all devices and screen
+                  sizes, our sidebar enhances user experience by providing easy
+                  navigation and accessibility in various contexts.
+                </p>
 
-              <h2 className="text-xl font-bold">Key Features:</h2>
-              <ul className=" list-disc ml-7">
-                <li>
-                  <strong>Responsive Design:</strong> Ensures optimal viewing
-                  and interaction experience on any device, from desktops to
-                  mobile phones.
-                </li>
-                <li>
-                  <strong>Sleek and Intuitive:</strong> Combines modern
-                  aesthetics with intuitive functionality, making navigation
-                  straightforward and enjoyable.
-                </li>
-                <li>
-                  <strong>Customizable:</strong> Tailor the sidebar to fit your
-                  application's unique design requirements effortlessly.
-                </li>
-              </ul>
+                <h2 className="text-xl font-bold">Key Features:</h2>
+                <ul className=" list-disc ml-7">
+                  <li>
+                    <strong>Responsive Design:</strong> Ensures optimal viewing
+                    and interaction experience on any device, from desktops to
+                    mobile phones.
+                  </li>
+                  <li>
+                    <strong>Sleek and Intuitive:</strong> Combines modern
+                    aesthetics with intuitive functionality, making navigation
+                    straightforward and enjoyable.
+                  </li>
+                  <li>
+                    <strong>Customizable:</strong> Tailor the sidebar to fit
+                    your application's unique design requirements effortlessly.
+                  </li>
+                </ul>
 
-              <h2 className="text-2xl font-bold mt-5">main.jsx || main.js</h2>
-              <p>
-                You need the SidebarProvider in your main file for the
-                application to work.
-              </p>
-              <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll mt-5">
-                <code>
-                  {`import React from "react";
+                <h2 className="text-2xl font-bold mt-5">main.jsx || main.js</h2>
+                <p>
+                  You need the SidebarProvider in your main file for the
+                  application to work.
+                </p>
+                <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll mt-5">
+                  <code>
+                    {`import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -124,39 +127,39 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 );
 `}
-                </code>
-              </pre>
+                  </code>
+                </pre>
 
-              <h2 className="text-2xl font-bold mt-5">You need Tailwind</h2>
-              <p>
-                <a
-                  href="https://tailwindcss.com/docs/guides/vite"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tailwind for React and Vite
-                </a>
-              </p>
-              <p>
-                When you have Tailwind in your project, you may need to add a
-                line of code to the tailwind.config.js file if necessary.
-              </p>
+                <h2 className="text-2xl font-bold mt-5">You need Tailwind</h2>
+                <p>
+                  <a
+                    href="https://tailwindcss.com/docs/guides/vite"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Tailwind for React and Vite
+                  </a>
+                </p>
+                <p>
+                  When you have Tailwind in your project, you may need to add a
+                  line of code to the tailwind.config.js file if necessary.
+                </p>
 
-              <p className="mt-5">
-                <strong>This is the line that you need to add:</strong>
-              </p>
-              <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
-                <code>
-                  {`"./node_modules/sidebar-react-pro/dist/**/*.{js,ts,jsx,tsx}",`}
-                </code>
-              </pre>
+                <p className="mt-5">
+                  <strong>This is the line that you need to add:</strong>
+                </p>
+                <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
+                  <code>
+                    {`"./node_modules/sidebar-react-pro/dist/**/*.{js,ts,jsx,tsx}",`}
+                  </code>
+                </pre>
 
-              <p className="mt-5">
-                <strong>This is how your code needs to look:</strong>
-              </p>
-              <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
-                <code>
-                  {`/** @type {import('tailwindcss').Config} */
+                <p className="mt-5">
+                  <strong>This is how your code needs to look:</strong>
+                </p>
+                <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
+                  <code>
+                    {`/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -169,13 +172,13 @@ export default {
   plugins: [],
 }
 `}
-                </code>
-              </pre>
+                  </code>
+                </pre>
 
-              <h2 className="text-2xl font-bold my-5">Sidebar</h2>
-              <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
-                <code>
-                  {`import {
+                <h2 className="text-2xl font-bold my-5">Sidebar</h2>
+                <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
+                  <code>
+                    {`import {
   SideBar,
   ButtonBar,
   ButtonDropDownBar,
@@ -204,13 +207,13 @@ function App() {
 
 export default App;
 `}
-                </code>
-              </pre>
+                  </code>
+                </pre>
 
-              <h2 className="text-2xl font-bold my-5">Sidebar props</h2>
-              <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
-                <code>
-                  {`import { SideBar } from "sidebar-react-pro";
+                <h2 className="text-2xl font-bold my-5">Sidebar props</h2>
+                <pre className=" bg-stone-100 rounded-md p-2 overflow-scroll">
+                  <code>
+                    {`import { SideBar } from "sidebar-react-pro";
 
 function App() {
   return (
@@ -235,9 +238,10 @@ function App() {
 
 export default App;
 `}
-                </code>
-              </pre>
-            </div>
+                  </code>
+                </pre>
+              </div>
+            </SidebarClose>
           </div>
         </div>
       </div>
