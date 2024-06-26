@@ -3,11 +3,12 @@ import { AppContex } from "./AppContex";
 import { HomeIcon } from "./icons/HomeIcon";
 import { Button } from "./Button";
 
-export const ButtonBar = ({ children, icon = "", TxtColor }) => {
+export const ButtonBar = ({ children, icon = "", TxtColor, onClick }) => {
   const { isOpen } = useContext(AppContex);
   return (
     <div>
       <Button
+        onClick={onClick}
         className={`w-[100%] pl-5 text-2xl font-thin bg-transparent rounded-md ${TxtColor}`}
         StartSvg={isOpen ? icon : null}
       >

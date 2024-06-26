@@ -7,7 +7,6 @@ export const Button = ({
   StartSvg,
 
   RippleColor = "bg-[#ffffffb5]",
-
   className,
 }) => {
   const [ripples, setRipples] = useState([]);

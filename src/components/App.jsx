@@ -18,6 +18,9 @@ function App() {
   const handleBg = () => {
     setImgBg(false);
   };
+  const handleClick = () => {
+    console.log("hola");
+  };
   return (
     <>
       <div className="flex">
@@ -40,7 +43,12 @@ function App() {
             TxtColor={"text-white"}
             Name={"Product"}
           >
-            <DropDownOptions TxtColor={"text-white"}>Product1</DropDownOptions>
+            <DropDownOptions
+              onClick={() => handleClick(2, 2)}
+              TxtColor={"text-white"}
+            >
+              Product1
+            </DropDownOptions>
             <DropDownOptions TxtColor={"text-white"}>Product2</DropDownOptions>
             <DropDownOptions TxtColor={"text-white"}>Product3</DropDownOptions>
             <DropDownOptions TxtColor={"text-white"}>Product4</DropDownOptions>
